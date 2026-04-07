@@ -1,0 +1,43 @@
+@import "tailwindcss";
+
+@theme {
+  /* Minimal & classy font stack */
+  --font-sans: "Inter", "GeistSans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+}
+
+@layer base {
+  :root {
+    --background: #ffffff;
+    --foreground: #0a0a0a;
+    
+    /* Variables for glassmorphism */
+    --glass-bg: rgba(255, 255, 255, 0.4);
+    --glass-border: rgba(0, 0, 0, 0.1);
+  }
+
+  .dark {
+    --background: #0f0f0f;
+    --foreground: #fafafa;
+    
+    /* Variables for dark glassmorphism */
+    --glass-bg: rgba(255, 255, 255, 0.05);
+    --glass-border: rgba(255, 255, 255, 0.08);
+  }
+
+  html {
+    @apply antialiased scroll-smooth;
+  }
+  
+  body {
+    @apply bg-[var(--background)] text-[var(--foreground)] transition-colors duration-300;
+  }
+}
+
+@layer utilities {
+  .glass {
+    @apply backdrop-blur-xl bg-[var(--glass-bg)] border border-[var(--glass-border)] shadow-sm;
+  }
+}
