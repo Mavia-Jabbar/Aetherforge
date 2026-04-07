@@ -1,12 +1,14 @@
 @import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Inter:wght@300;400;500;600&family=Outfit:wght@300;400;500;600&display=swap');
 
 :root {
   --background: #ffffff;
   --foreground: #0a0a0a;
   
-  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-family: "Inter", sans-serif;
   
-  --font-heading: "Netran Classic", "Georgia", serif;
+  --font-heading: "Audiowide", sans-serif;
+  --font-subheading: "Outfit", sans-serif;
   
   /* Variables for glassmorphism */
   --glass-bg: rgba(255, 255, 255, 0.4);
@@ -47,4 +49,8 @@ body {
 
 .font-heading {
   font-family: var(--font-heading);
+}
+
+.font-subheading {
+  font-family: var(--font-subheading);
 }
