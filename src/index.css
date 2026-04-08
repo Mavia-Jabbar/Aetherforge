@@ -1,15 +1,18 @@
 @import "tailwindcss";
-@import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Inter:wght@300;400;500;600&family=Outfit:wght@300;400;500;600&display=swap');
+
+@theme {
+  --color-background: #ffffff;
+  --color-foreground: #0a0a0a;
+
+  /* Font definitions for Tailwind v4 */
+  --font-sans: "Inter", sans-serif;
+  --font-heading: "Audiowide", sans-serif;
+  --font-subheading: "Outfit", sans-serif;
+}
 
 :root {
   --background: #ffffff;
   --foreground: #0a0a0a;
-  
-  font-family: "Inter", sans-serif;
-  
-  --font-heading: "Audiowide", sans-serif;
-  --font-subheading: "Outfit", sans-serif;
-  
   /* Variables for glassmorphism */
   --glass-bg: rgba(255, 255, 255, 0.4);
   --glass-border: rgba(0, 0, 0, 0.1);
@@ -18,7 +21,7 @@
 .dark {
   --background: #0f0f0f;
   --foreground: #fafafa;
-  
+
   /* Variables for dark glassmorphism */
   --glass-bg: rgba(255, 255, 255, 0.05);
   --glass-border: rgba(255, 255, 255, 0.08);
@@ -33,7 +36,8 @@ html {
 body {
   background-color: var(--background);
   color: var(--foreground);
-  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+  transition-property:
+    color, background-color, border-color, text-decoration-color, fill, stroke;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 300ms;
 }
