@@ -50,8 +50,6 @@ export function Contact() {
       setIsSubmitting(false);
       setTimeout(() => setSubmitStatus(null), 5000);
     }
-      setTimeout(() => setSubmitStatus(null), 5000);
-    }
   };
 
   return (
